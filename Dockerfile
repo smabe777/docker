@@ -1,4 +1,5 @@
 FROM python:3.8.3-alpine
+RUN apk add gcc musl-dev python3-dev libffi-dev openssl-dev cargo
 WORKDIR /skillmgr
 COPY . .
 COPY instance/skillmgr.sqlite /skillmgr/instance/
